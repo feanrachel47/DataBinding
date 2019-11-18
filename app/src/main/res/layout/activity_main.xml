@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="myName"
+            type="com.example.databinding.MyName" />
+
+        <variable
+            name="myContact"
+            type="com.example.databinding.MyContact" />
+    </data>
+    <!-- com.example.databinding.MyName // com.... from MyName package first line, MyName is class name -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity" >
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={myName.name}" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <Button
+            android:id="@+id/buttonSetName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/set_name" />
+
+        <TextView
+            android:id="@+id/textViewContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={myContact.contact}"/>
+
+        <EditText
+            android:id="@+id/editTextContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Contact" />
+
+        <Button
+            android:id="@+id/buttonsSetContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/setContact" />
+    </LinearLayout>
+
+</layout>
